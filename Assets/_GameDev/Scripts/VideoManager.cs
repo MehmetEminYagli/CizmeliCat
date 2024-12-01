@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class VideoManager : MonoBehaviour
 {
     [SerializeField] private VideoPlayer videoPlayer;
@@ -41,7 +41,7 @@ public class VideoManager : MonoBehaviour
 
     private IEnumerator FadeOutAndPlayNextVideo()
     {
-        yield return StartCoroutine(FadeToBlack(1f));
+        //yield return StartCoroutine(FadeToBlack(1f));
         currentVideoIndex++;
         if (currentVideoIndex < videoInfos.Length)
         {
@@ -56,7 +56,7 @@ public class VideoManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
 
-        yield return StartCoroutine(FadeToBlack(0f));
+        //yield return StartCoroutine(FadeToBlack(0f));
     }
 
     private IEnumerator FadeToBlack(float targetAlpha)
@@ -85,6 +85,12 @@ public class VideoManager : MonoBehaviour
             videoPlayer.Play();
             Debug.Log($"Playing video: {videoPlayer.clip.name}");
         }
+        else
+        {
+         
+            LoadMainMenu();
+
+        }
     }
 
     private void SlowDownVideo()
@@ -110,25 +116,64 @@ public class VideoManager : MonoBehaviour
         });
     }
 
+    [SerializeField] private VideoClip wrongVideoClip;
+    private void PlayWrongVideo()
+    {
+        if (wrongVideoClip != null)
+        {
+            isSlowedDown = false;
+            videoPlayer.clip = wrongVideoClip;
+            videoPlayer.playbackSpeed = 1f;
+            videoPlayer.Play();
+            Debug.Log($"Playing wrong video: {wrongVideoClip.name}");
+        }
+        else
+        {
+            Debug.LogWarning("Wrong video clip is not assigned!");
+        }
+    }
+
+
+
     private IEnumerator HandleAnswerFeedback(bool isCorrect)
     {
         // Wait for feedback display
-        yield return new WaitForSeconds(1f);  // Adjust the delay as needed
+        yield return new WaitForSeconds(1f);
 
-        // If the answer was correct, resume the video
         if (isCorrect)
         {
+            // If the answer is correct, resume the current video
             ResumeVideo();
         }
         else
         {
-            Debug.Log("Wrong answer, try again.");
-            // You can add logic to handle wrong answers if needed
-        }
+            questionPanel.gameObject.SetActive(false);
+            yield return StartCoroutine(FadeToBlack(1f));
 
-        // Hide the question panel after feedback
-        questionPanel.gameObject.SetActive(false);
+            // Restart the video from the beginning
+            RestartCurrentVideo();
+
+            yield return StartCoroutine(FadeToBlack(0f));
+        }
     }
+
+    private void RestartCurrentVideo()
+    {
+        // Reset the video player to the start of the current clip
+        videoPlayer.Stop(); // Stop the current video
+        videoPlayer.time = 0f; // Reset the video time to the start
+        videoPlayer.playbackSpeed = 1f;
+        videoPlayer.Play();   // Start playing the video again from the beginning
+        isSlowedDown = false;
+
+        Debug.Log($"Restarting video: {videoPlayer.clip.name}");
+    }
+
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
 
     private void PauseVideo()
     {

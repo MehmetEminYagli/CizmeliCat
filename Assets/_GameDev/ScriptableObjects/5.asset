@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   videoClip: {fileID: 32900000, guid: 6a16324e182647e4dbb27dd86327ebdc, type: 3}
-  slowdownTime: 2
+  slowdownTime: 12
   slowdownSpeed: 0.2
-  questionText: "\xC7izmeli Kedi\u2019nin \"Alt\u0131n Sa\xE7l\u0131 K\u0131z ve
-    \xDC\xE7 Ay\u0131\" ekibinden \xE7ald\u0131\u011F\u0131 nesne nedir?"
+  questionText: "\xC7izmeli Kedi\u2019nin ilk kez ortaya \xE7\u0131kt\u0131\u011F\u0131
+    hikaye nedir?"
   answers:
-  - "B\xFCy\xFCl\xFC Fasulye "
-  - "Harikalar Diyar\u0131 Haritas"
-  - "Alt\u0131n Yumurtlayan Tavuk"
-  - "G\xFCm\xFC\u015F K\u0131l\u0131\xE7"
+  - "K\xFClkedisi"
+  - "\xC7izmeli Kedi Masal\u0131"
+  - Rapunzel
+  - Hansel ve Gretel
   correctAnswerIndex: 1

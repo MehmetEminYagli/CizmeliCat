@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   videoClip: {fileID: 32900000, guid: 0d47a965f7c626444a5d7db4ecb4e791, type: 3}
-  slowdownTime: 2
+  slowdownTime: 8
   slowdownSpeed: 0.2
-  questionText: "\xC7izmeli Kedi\u2019nin \"Alt\u0131n Sa\xE7l\u0131 K\u0131z ve
-    \xDC\xE7 Ay\u0131\" ekibinden \xE7ald\u0131\u011F\u0131 nesne nedir?"
+  questionText: " \xC7izmeli Kedi'nin filmde d\xFC\u015Fmanlar\u0131ndan biri kimdir?"
   answers:
-  - "B\xFCy\xFCl\xFC Fasulye "
-  - "Harikalar Diyar\u0131 Haritas"
-  - "Alt\u0131n Yumurtlayan Tavuk"
-  - "G\xFCm\xFC\u015F K\u0131l\u0131\xE7"
-  correctAnswerIndex: 1
+  - "Alt\u0131n Sa\xE7l\u0131 K\u0131z"
+  - Jack Horner
+  - Humpty Dumpty
+  - Dev
+  correctAnswerIndex: 3

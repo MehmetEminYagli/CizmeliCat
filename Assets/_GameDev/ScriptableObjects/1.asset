@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169ef80f5cb358e4995bc5fbe1d58801, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 83938735af4e19b4b8d3962073a4bba6, type: 3}
-  slowdownTime: 21
+  videoClip: {fileID: 32900000, guid: e455b179db5c9b14595cc9745c4e6004, type: 3}
+  slowdownTime: 20
   slowdownSpeed: 0.2
-  questionText: "\xC7izmeli Kedi\u2019nin \"Alt\u0131n Sa\xE7l\u0131 K\u0131z ve
-    \xDC\xE7 Ay\u0131\" ekibinden \xE7ald\u0131\u011F\u0131 nesne nedir?"
+  questionText: "\xC7izmeli Kedi'nin as\u0131l ismi nedir?"
   answers:
-  - "B\xFCy\xFCl\xFC Fasulye "
-  - "Harikalar Diyar\u0131 Haritas"
-  - "Alt\u0131n Yumurtlayan Tavuk"
-  - "G\xFCm\xFC\u015F K\u0131l\u0131\xE7"
-  correctAnswerIndex: 1
+  - Puss in Boots
+  - Kitty Softpaws
+  - Humpty Dumpty
+  - Jack Horner
+  correctAnswerIndex: 0

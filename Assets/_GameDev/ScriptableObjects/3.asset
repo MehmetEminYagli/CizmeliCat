@@ -15,11 +15,10 @@ MonoBehaviour:
   videoClip: {fileID: 32900000, guid: 2a816172a29b3d94d92cd930a2b54ef7, type: 3}
   slowdownTime: 2
   slowdownSpeed: 0.2
-  questionText: "\xC7izmeli Kedi\u2019nin \"Alt\u0131n Sa\xE7l\u0131 K\u0131z ve
-    \xDC\xE7 Ay\u0131\" ekibinden \xE7ald\u0131\u011F\u0131 nesne nedir?"
+  questionText: "\xC7izmeli Kedi\u2019nin en belirgin aksesuar\u0131 nedir?"
   answers:
-  - "B\xFCy\xFCl\xFC Fasulye "
-  - "Harikalar Diyar\u0131 Haritas"
-  - "Alt\u0131n Yumurtlayan Tavuk"
-  - "G\xFCm\xFC\u015F K\u0131l\u0131\xE7"
+  - "K\u0131rm\u0131z\u0131 Pelerin"
+  - "\xC7izmeler"
+  - "\u015Eapka"
+  - "Maskeli G\xF6zl\xFCk"
   correctAnswerIndex: 1
