@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169ef80f5cb358e4995bc5fbe1d58801, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  videoClip: {fileID: 32900000, guid: 0d47a965f7c626444a5d7db4ecb4e791, type: 3}
+  slowdownTime: 2
+  slowdownSpeed: 0.2
+  questionText: "\xC7izmeli Kedi\u2019nin \"Alt\u0131n Sa\xE7l\u0131 K\u0131z ve
+    \xDC\xE7 Ay\u0131\" ekibinden \xE7ald\u0131\u011F\u0131 nesne nedir?"
+  answers:
+  - "B\xFCy\xFCl\xFC Fasulye "
+  - "Harikalar Diyar\u0131 Haritas"
+  - "Alt\u0131n Yumurtlayan Tavuk"
+  - "G\xFCm\xFC\u015F K\u0131l\u0131\xE7"
+  correctAnswerIndex: 1
